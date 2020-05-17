@@ -21,4 +21,13 @@ class GraphCard implements ComputerComponent {
       for (GraphComponent component : graphCardsComponents)
          component.display(indent);
    }
+
+   @Override
+   public int getPrice() {
+      int sum = 0;
+      for (GraphComponent graphComponent : graphCardsComponents)
+         sum += graphComponent.getPrice();
+
+      return sum;
+   }
 }

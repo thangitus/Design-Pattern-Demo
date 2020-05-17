@@ -21,4 +21,12 @@ class Computer {
       for (ComputerComponent component : computerComponents)
          component.display(indent);
    }
+
+   public int getPrice() {
+      int sum = 0;
+      for (ComputerComponent computerComponent : computerComponents)
+         sum += computerComponent.getPrice();
+
+      return sum;
+   }
 }

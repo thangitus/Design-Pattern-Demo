@@ -1,17 +1,17 @@
 class Demo {
    public static void main(String[] args) {
-      Memory m1 = new Memory("Kingston");
-      Memory m2 = new Memory("Samsung");
+      Memory m1 = new Memory("Kingston", 12);
+      Memory m2 = new Memory("Samsung", 54);
 
-      GPU gpu1 = new GPU("VGA");
-      GPU gpu2 = new GPU("NVIDIA");
+      GPU gpu1 = new GPU("VGA", 26);
+      GPU gpu2 = new GPU("NVIDIA", 9);
 
-      Keyboard keyboard1 = new Keyboard("Logitech K380");
-      Keyboard keyboard2 = new Keyboard("Keychron K2");
+      Keyboard keyboard1 = new Keyboard("Logitech K380", 4);
+      Keyboard keyboard2 = new Keyboard("Keychron K2", 6);
 
-      Monitor monitor = new Monitor("Phillips");
+      Monitor monitor = new Monitor("Phillips", 7);
 
-      CPU cpu = new CPU("Intel Core i9-9900K");
+      CPU cpu = new CPU("Intel Core i9-9900K", 100);
 
       GraphCard graphCard1 = new GraphCard("Quadro RTX 8000");
       graphCard1.addComponent(m1);
@@ -31,5 +31,8 @@ class Demo {
       computer.addComponent(graphCard2);
 
       computer.display(" ");
+
+      System.out.println();
+      System.out.println("Price of this computer: " + computer.getPrice());
    }
 }

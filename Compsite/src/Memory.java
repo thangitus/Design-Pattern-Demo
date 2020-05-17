@@ -1,14 +1,21 @@
 class Memory implements GraphComponent, ComputerComponent {
    String name;
+   int price;
 
-   public Memory(String name) {
+   public Memory(String name, int price) {
       this.name = name;
+      this.price = price;
    }
 
    @Override
    public void display(String indent) {
       indent += indent;
       System.out.println(indent + "|_Memory " + name);
+   }
+
+   @Override
+   public int getPrice() {
+      return price;
    }
 
    @Override
