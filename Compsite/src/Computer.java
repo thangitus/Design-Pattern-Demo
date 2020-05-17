@@ -1,0 +1,24 @@
+import java.util.ArrayList;
+import java.util.List;
+
+class Computer {
+   String name;
+   List<ComputerComponent> computerComponents;
+
+   public Computer(String name) {
+      this.name = name;
+      computerComponents = new ArrayList<>();
+   }
+
+   void addComponent(ComputerComponent computerComponent) {
+      if (!computerComponents.contains(computerComponent))
+         computerComponents.add(computerComponent);
+   }
+
+   public void display(String indent) {
+      indent += indent;
+      System.out.println(indent + name);
+      for (ComputerComponent component : computerComponents)
+         component.display(indent);
+   }
+}
