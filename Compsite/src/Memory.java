@@ -1,4 +1,4 @@
-class Memory implements GraphComponent, ComputerComponent {
+class Memory implements GraphComponent {
    String name;
    int price;
 
